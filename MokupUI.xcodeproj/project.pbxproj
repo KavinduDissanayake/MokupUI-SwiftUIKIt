@@ -32,6 +32,9 @@
 		CFAF1AE229669BC7002BAD33 /* PromotionsCard.xib in Resources */ = {isa = PBXBuildFile; fileRef = CFAF1AE129669BC7002BAD33 /* PromotionsCard.xib */; };
 		CFAF1AE629669C2F002BAD33 /* CategoryCrad.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFAF1AE429669C2F002BAD33 /* CategoryCrad.swift */; };
 		CFAF1AE729669C2F002BAD33 /* CategoryCrad.xib in Resources */ = {isa = PBXBuildFile; fileRef = CFAF1AE529669C2F002BAD33 /* CategoryCrad.xib */; };
+		CFAF1AE92966A2C5002BAD33 /* RoundedCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFAF1AE82966A2C5002BAD33 /* RoundedCollectionView.swift */; };
+		CFAF1AED2966A630002BAD33 /* RewardsCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFAF1AEB2966A630002BAD33 /* RewardsCard.swift */; };
+		CFAF1AEE2966A630002BAD33 /* RewardsCard.xib in Resources */ = {isa = PBXBuildFile; fileRef = CFAF1AEC2966A630002BAD33 /* RewardsCard.xib */; };
 		CFDE0675296662340088973C /* Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFDE0674296662340088973C /* Extension.swift */; };
 		CFDE0679296664C40088973C /* CornerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFDE0678296664C40088973C /* CornerView.swift */; };
 		CFDE0680296676B30088973C /* PromotionsCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFDE067E296676B30088973C /* PromotionsCard.swift */; };
@@ -67,6 +70,9 @@
 		CFAF1AE129669BC7002BAD33 /* PromotionsCard.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = PromotionsCard.xib; path = ../../../../../../../Desktop/PromotionsCard.xib; sourceTree = "<group>"; };
 		CFAF1AE429669C2F002BAD33 /* CategoryCrad.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryCrad.swift; sourceTree = "<group>"; };
 		CFAF1AE529669C2F002BAD33 /* CategoryCrad.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CategoryCrad.xib; sourceTree = "<group>"; };
+		CFAF1AE82966A2C5002BAD33 /* RoundedCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedCollectionView.swift; sourceTree = "<group>"; };
+		CFAF1AEB2966A630002BAD33 /* RewardsCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RewardsCard.swift; sourceTree = "<group>"; };
+		CFAF1AEC2966A630002BAD33 /* RewardsCard.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RewardsCard.xib; sourceTree = "<group>"; };
 		CFDE0674296662340088973C /* Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extension.swift; sourceTree = "<group>"; };
 		CFDE0678296664C40088973C /* CornerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CornerView.swift; sourceTree = "<group>"; };
 		CFDE067E296676B30088973C /* PromotionsCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PromotionsCard.swift; sourceTree = "<group>"; };
@@ -190,13 +196,22 @@
 			path = Storyboards;
 			sourceTree = "<group>";
 		};
-		CFAF1AE329669BEC002BAD33 /* Category */ = {
+		CFAF1AE329669BEC002BAD33 /* CategoryCard */ = {
 			isa = PBXGroup;
 			children = (
 				CFAF1AE429669C2F002BAD33 /* CategoryCrad.swift */,
 				CFAF1AE529669C2F002BAD33 /* CategoryCrad.xib */,
 			);
-			path = Category;
+			path = CategoryCard;
+			sourceTree = "<group>";
+		};
+		CFAF1AEA2966A5FA002BAD33 /* RewardsCard */ = {
+			isa = PBXGroup;
+			children = (
+				CFAF1AEB2966A630002BAD33 /* RewardsCard.swift */,
+				CFAF1AEC2966A630002BAD33 /* RewardsCard.xib */,
+			);
+			path = RewardsCard;
 			sourceTree = "<group>";
 		};
 		CFDE06762966648D0088973C /* Extension */ = {
@@ -211,6 +226,7 @@
 			isa = PBXGroup;
 			children = (
 				CFDE0678296664C40088973C /* CornerView.swift */,
+				CFAF1AE82966A2C5002BAD33 /* RoundedCollectionView.swift */,
 			);
 			path = SubView;
 			sourceTree = "<group>";
@@ -228,7 +244,8 @@
 		CFDE067B296676700088973C /* Components */ = {
 			isa = PBXGroup;
 			children = (
-				CFAF1AE329669BEC002BAD33 /* Category */,
+				CFAF1AEA2966A5FA002BAD33 /* RewardsCard */,
+				CFAF1AE329669BEC002BAD33 /* CategoryCard */,
 				CF55A9D229669B61006FBD26 /* PromotionsCard */,
 			);
 			path = Components;
@@ -328,6 +345,7 @@
 			files = (
 				CFAF1AE729669C2F002BAD33 /* CategoryCrad.xib in Resources */,
 				CF56F9E82965C9390066265A /* LaunchScreen.storyboard in Resources */,
+				CFAF1AEE2966A630002BAD33 /* RewardsCard.xib in Resources */,
 				CF0EB83D296653F000D4285C /* Poppins-SemiBold.ttf in Resources */,
 				CF0EB83C296653F000D4285C /* Poppins-Bold.ttf in Resources */,
 				CF56F9E52965C9390066265A /* Assets.xcassets in Resources */,
@@ -393,8 +411,10 @@
 				CFAF1AE629669C2F002BAD33 /* CategoryCrad.swift in Sources */,
 				CF56F9DC2965C9370066265A /* AppDelegate.swift in Sources */,
 				CF55A9BA296681F2006FBD26 /* AlertProvider.swift in Sources */,
+				CFAF1AED2966A630002BAD33 /* RewardsCard.swift in Sources */,
 				CFDE0680296676B30088973C /* PromotionsCard.swift in Sources */,
 				CF55A9BE29668224006FBD26 /* ApplicationServiceProvider.swift in Sources */,
+				CFAF1AE92966A2C5002BAD33 /* RoundedCollectionView.swift in Sources */,
 				CF55A9CE29668589006FBD26 /* PromtionModel.swift in Sources */,
 				CF55A9C029668308006FBD26 /* Handlers.swift in Sources */,
 				CF55A9C7296684D8006FBD26 /* BaseVC.swift in Sources */,

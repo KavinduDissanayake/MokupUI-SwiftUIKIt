@@ -16,6 +16,8 @@ class RewardsVC: BaseVC {
     @IBOutlet weak var promtionCV: UICollectionView!
     @IBOutlet weak var categoryCV: UICollectionView!
     @IBOutlet weak var pageControl: UIPageControl!
+    @IBOutlet weak var rewardsCV: UICollectionView!
+    
     //variable
     let disposeBag = DisposeBag()
     private let viewModel = RewardsVM()
@@ -30,6 +32,10 @@ class RewardsVC: BaseVC {
         
         registerCategoryCell()
         bindcdCegoryCollectionView()
+        
+        
+        registerRewardsCell()
+        bindcdRewardsCollectionView()
     }
     
     
@@ -37,6 +43,7 @@ class RewardsVC: BaseVC {
 //MARK: setup UI
 extension RewardsVC {
     func setupUI(){
+        categoryCV.layer.cornerRadius =  20
         topHeaderView.addBottomRoundedEdge()
     }
 }
@@ -48,9 +55,7 @@ extension RewardsVC {
     private func registerPromtionyCell(){
         //register xib
         self.promtionCV.register(UINib(nibName: PromotionsCard.className, bundle: Bundle.main), forCellWithReuseIdentifier: PromotionsCard.className)
-        
     }
-    
     private func bindRewardsCollectionView() {
         //call deleagets
         promtionCV.rx.setDelegate(self)
@@ -71,25 +76,52 @@ extension RewardsVC {
     }
 }
 
+
+
 //MARK: category collection view
 extension RewardsVC {
     
     private func registerCategoryCell(){
         //register xib
-//        self.categoryCV.register(UINib(nibName: CategoryCrad.className, bundle: Bundle.main), forCellWithReuseIdentifier: CategoryCrad.className)
+        self.categoryCV.register(UINib(nibName: CategoryCrad.className, bundle: Bundle.main), forCellWithReuseIdentifier: CategoryCrad.className)
         
     }
     
     private func bindcdCegoryCollectionView() {
         //call deleagets
-//        categoryCV.rx.setDelegate(self)
-//            .disposed(by: disposeBag)
-//       
-//        //cell declare
-//        viewModel.promtionList.bind(to: categoryCV.rx.items(cellIdentifier: CategoryCrad.className, cellType: CategoryCrad.self)) { (row,item,cell) in
-//            //ui config
-//        
-//        }.disposed(by: disposeBag)
+        categoryCV.rx.setDelegate(self)
+            .disposed(by: disposeBag)
+
+        //cell declare
+        viewModel.promtionList.bind(to: categoryCV.rx.items(cellIdentifier: CategoryCrad.className, cellType: CategoryCrad.self)) { (row,item,cell) in
+            //ui config
+
+        }.disposed(by: disposeBag)
+    }
+    
+}
+
+
+
+//MARK: rewards collection view
+extension RewardsVC {
+    
+    private func registerRewardsCell(){
+        //register xib
+        self.rewardsCV.register(UINib(nibName: RewardsCard.className, bundle: Bundle.main), forCellWithReuseIdentifier: RewardsCard.className)
+        
+    }
+    
+    private func bindcdRewardsCollectionView() {
+        //call deleagets
+        rewardsCV.rx.setDelegate(self)
+            .disposed(by: disposeBag)
+
+        //cell declare
+        viewModel.promtionList.bind(to: rewardsCV.rx.items(cellIdentifier: RewardsCard.className, cellType: RewardsCard.self)) { (row,item,cell) in
+            //ui config
+
+        }.disposed(by: disposeBag)
     }
     
 }
@@ -100,7 +132,16 @@ extension RewardsVC : UICollectionViewDelegateFlowLayout{
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         let width = collectionView.bounds.width
-        return CGSize(width: width, height: 250)
+        
+        if collectionView == promtionCV {
+            return CGSize(width: width, height: 250)
+        }else  if collectionView == categoryCV {
+            return CGSize(width: 100, height: 45)
+        }else  if collectionView == rewardsCV {
+            return CGSize(width: width*0.8, height: 180)
+        }  else  {
+            return CGSize(width: 100, height: 45)
+        }
     }
     
     public func collectionView(_ collectionView: UICollectionView, layout

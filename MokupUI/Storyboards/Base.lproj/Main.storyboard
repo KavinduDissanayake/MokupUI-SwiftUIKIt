@@ -12,6 +12,9 @@
         <array key="Poppins-Regular.ttf">
             <string>Poppins-Regular</string>
         </array>
+        <array key="Poppins-SemiBold.ttf">
+            <string>Poppins-SemiBold</string>
+        </array>
     </customFonts>
     <scenes>
         <!--Item-->
@@ -139,13 +142,13 @@
                                             <constraint firstAttribute="height" constant="400" id="z6V-cD-23B"/>
                                         </constraints>
                                     </view>
-                                    <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="xbz-nQ-Lla">
-                                        <rect key="frame" x="20" y="410" width="374" height="60"/>
+                                    <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="xbz-nQ-Lla">
+                                        <rect key="frame" x="20" y="410" width="374" height="45"/>
                                         <color key="backgroundColor" systemColor="systemCyanColor"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="60" id="x9M-T7-8Ex"/>
+                                            <constraint firstAttribute="height" constant="45" id="x9M-T7-8Ex"/>
                                         </constraints>
-                                        <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="cDn-U4-3l1">
+                                        <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="cDn-U4-3l1">
                                             <size key="itemSize" width="128" height="128"/>
                                             <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                             <size key="footerReferenceSize" width="0.0" height="0.0"/>
@@ -153,14 +156,61 @@
                                         </collectionViewFlowLayout>
                                         <cells/>
                                     </collectionView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" misplaced="YES" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="4az-Wn-gSw">
+                                        <rect key="frame" x="20" y="600" width="374" height="318"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Completed Rewards" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GYn-XC-O9i">
+                                                <rect key="frame" x="0.0" y="0.0" width="374" height="18.5"/>
+                                                <fontDescription key="fontDescription" name="Poppins-SemiBold" family="Poppins" pointSize="13"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="SkZ-2k-yle">
+                                                <rect key="frame" x="0.0" y="18.5" width="374" height="231"/>
+                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="o1b-yS-Sjy">
+                                                    <size key="itemSize" width="128" height="128"/>
+                                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                                </collectionViewFlowLayout>
+                                                <cells/>
+                                            </collectionView>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Completed Rewards" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GcA-VT-U3a">
+                                                <rect key="frame" x="0.0" y="249.5" width="374" height="18.5"/>
+                                                <fontDescription key="fontDescription" name="Poppins-SemiBold" family="Poppins" pointSize="13"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="BwJ-b1-vKk">
+                                                <rect key="frame" x="0.0" y="268" width="374" height="50"/>
+                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="50" id="DTu-bg-j3E"/>
+                                                </constraints>
+                                                <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="5rb-1l-QbP">
+                                                    <size key="itemSize" width="128" height="128"/>
+                                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                                </collectionViewFlowLayout>
+                                                <cells/>
+                                            </collectionView>
+                                        </subviews>
+                                        <color key="backgroundColor" systemColor="linkColor"/>
+                                    </stackView>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="trailing" secondItem="xbz-nQ-Lla" secondAttribute="trailing" constant="20" id="6eL-Yc-q6q"/>
+                                    <constraint firstAttribute="trailing" secondItem="4az-Wn-gSw" secondAttribute="trailing" constant="20" id="7dz-BT-Ndj"/>
                                     <constraint firstItem="kNe-dQ-BMk" firstAttribute="top" secondItem="kwn-eG-ff9" secondAttribute="top" id="GPU-Rh-V1b"/>
+                                    <constraint firstItem="4az-Wn-gSw" firstAttribute="top" secondItem="xbz-nQ-Lla" secondAttribute="bottom" constant="20" id="TYM-aX-VJ4"/>
+                                    <constraint firstAttribute="bottom" secondItem="4az-Wn-gSw" secondAttribute="bottom" constant="20" id="VI1-3j-s8k"/>
                                     <constraint firstItem="xbz-nQ-Lla" firstAttribute="leading" secondItem="kwn-eG-ff9" secondAttribute="leading" constant="20" id="bbh-RB-b7e"/>
                                     <constraint firstItem="kNe-dQ-BMk" firstAttribute="leading" secondItem="kwn-eG-ff9" secondAttribute="leading" id="ook-dE-Sm9"/>
                                     <constraint firstAttribute="trailing" secondItem="kNe-dQ-BMk" secondAttribute="trailing" id="r5H-FT-8TB"/>
+                                    <constraint firstItem="4az-Wn-gSw" firstAttribute="leading" secondItem="kwn-eG-ff9" secondAttribute="leading" constant="20" id="r7E-Xd-jJk"/>
                                     <constraint firstItem="xbz-nQ-Lla" firstAttribute="top" secondItem="kNe-dQ-BMk" secondAttribute="bottom" constant="10" id="wJZ-98-5rP"/>
                                 </constraints>
                             </view>
@@ -176,8 +226,10 @@
                     </view>
                     <tabBarItem key="tabBarItem" title="Home" id="vlv-W8-baH"/>
                     <connections>
+                        <outlet property="categoryCV" destination="xbz-nQ-Lla" id="2ND-UJ-UG0"/>
                         <outlet property="pageControl" destination="bPJ-gw-FWS" id="ej9-ti-4wB"/>
                         <outlet property="promtionCV" destination="l2B-6F-zbg" id="DLo-Id-4iS"/>
+                        <outlet property="rewardsCV" destination="SkZ-2k-yle" id="3Xh-kB-zzp"/>
                         <outlet property="topHeaderView" destination="kNe-dQ-BMk" id="qQ7-oB-Vld"/>
                     </connections>
                 </viewController>
@@ -268,6 +320,9 @@
         <namedColor name="#fdaf27">
             <color red="1" green="0.69803921568627447" blue="0.17647058823529413" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
+        <systemColor name="linkColor">
+            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
