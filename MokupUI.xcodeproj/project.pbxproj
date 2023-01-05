@@ -38,6 +38,7 @@
 		CFC7E773296735A9008D8604 /* AFWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFC7E772296735A9008D8604 /* AFWrapper.swift */; };
 		CFC7E775296736FC008D8604 /* RewardsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFC7E774296736FC008D8604 /* RewardsModel.swift */; };
 		CFC7E777296747E9008D8604 /* CatogryModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFC7E776296747E9008D8604 /* CatogryModel.swift */; };
+		CFC7E7792967605F008D8604 /* Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFC7E7782967605F008D8604 /* Helpers.swift */; };
 		CFDE0675296662340088973C /* Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFDE0674296662340088973C /* Extension.swift */; };
 		CFDE0679296664C40088973C /* CornerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFDE0678296664C40088973C /* CornerView.swift */; };
 		CFDE0680296676B30088973C /* PromotionsCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFDE067E296676B30088973C /* PromotionsCard.swift */; };
@@ -79,6 +80,7 @@
 		CFC7E772296735A9008D8604 /* AFWrapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AFWrapper.swift; sourceTree = "<group>"; };
 		CFC7E774296736FC008D8604 /* RewardsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RewardsModel.swift; sourceTree = "<group>"; };
 		CFC7E776296747E9008D8604 /* CatogryModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatogryModel.swift; sourceTree = "<group>"; };
+		CFC7E7782967605F008D8604 /* Helpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Helpers.swift; sourceTree = "<group>"; };
 		CFDE0674296662340088973C /* Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extension.swift; sourceTree = "<group>"; };
 		CFDE0678296664C40088973C /* CornerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CornerView.swift; sourceTree = "<group>"; };
 		CFDE067E296676B30088973C /* PromotionsCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PromotionsCard.swift; sourceTree = "<group>"; };
@@ -288,6 +290,7 @@
 				CF55A9BF29668308006FBD26 /* Handlers.swift */,
 				CF55A9C129668323006FBD26 /* Constant.swift */,
 				CF55A9C8296684F5006FBD26 /* LoadingIndicatorDelegate.swift */,
+				CFC7E7782967605F008D8604 /* Helpers.swift */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -433,6 +436,7 @@
 				CF55A9CB2966851A006FBD26 /* RewardsVM.swift in Sources */,
 				CF55A9C9296684F5006FBD26 /* LoadingIndicatorDelegate.swift in Sources */,
 				CF55A9BC2966820B006FBD26 /* NetworkRechability.swift in Sources */,
+				CFC7E7792967605F008D8604 /* Helpers.swift in Sources */,
 				CF55A9C229668323006FBD26 /* Constant.swift in Sources */,
 				CF55A9D12966863A006FBD26 /* dummyData.swift in Sources */,
 				CF56F9DE2965C9370066265A /* SceneDelegate.swift in Sources */,

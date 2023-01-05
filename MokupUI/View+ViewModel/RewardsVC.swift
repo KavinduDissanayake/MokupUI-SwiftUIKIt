@@ -24,7 +24,7 @@ class RewardsVC: BaseVC {
     let disposeBag = DisposeBag()
     private let viewModel = RewardsVM()
     
-    
+    let currentPage = BehaviorRelay<Int>(value: 0)
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -33,6 +33,9 @@ class RewardsVC: BaseVC {
         
         registerPromtionyCell()
         binPromtionyCollectionView()
+        
+        setPageInitalValue()
+        
         
         registerCategoryCell()
         bindcdCegoryCollectionView()
@@ -46,6 +49,8 @@ class RewardsVC: BaseVC {
         bindcdRewardsUnCompletedCollectionView()
         
         getListData()
+        
+
     }
     
     
@@ -56,7 +61,6 @@ extension RewardsVC {
         // 1. Get a reference to the scroll view and the content view
         categoryCV.layer.cornerRadius =  20
         promtionCV.contentInset = .zero
-        
         topHeaderView.addBottomRoundedEdge()
     }
 }
@@ -64,24 +68,20 @@ extension RewardsVC {
 
 //MARK: api call
 extension RewardsVC {
-    
     func getListData(){
         //start indicator
         startLoading()
-        
         viewModel.fetchRewardsList{ (sccuess,message) in
-            
             //stop indicator
             self.stopLoading()
-            
             //if any failure
             if !sccuess {
                 AlertProvider.sharedInstance.alert(view: self, title: "Error", message: message)
             }
-            
         }
     }
 }
+
 
 
 
@@ -92,6 +92,7 @@ extension RewardsVC {
         //register xib
         self.promtionCV.register(UINib(nibName: PromotionsCard.className, bundle: Bundle.main), forCellWithReuseIdentifier: PromotionsCard.className)
     }
+    
     private func binPromtionyCollectionView() {
         //call deleagets
         promtionCV.rx.setDelegate(self)
@@ -102,18 +103,27 @@ extension RewardsVC {
             //ui config
             
         }.disposed(by: disposeBag)
-        
-        
-      
+    }
+   
+}
+
+
+//MARK: page view control
+extension RewardsVC {
+    
+    func setPageInitalValue(){
+        pageControl.numberOfPages = viewModel.catgoryList.value.count
     }
     
     func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
-        let pageWidth = scrollView.frame.size.width
-        let currentPage = Int(scrollView.contentOffset.x / pageWidth)
-        pageControl.currentPage = currentPage
+        if scrollView == promtionCV {
+            print("Call Top CollectionView")
+            let pageWidth = scrollView.frame.size.width
+            let currentPage = Int(scrollView.contentOffset.x / pageWidth)
+            pageControl.currentPage = currentPage
+        }
     }
 }
-
 
 
 //MARK: category collection view
@@ -148,6 +158,9 @@ extension RewardsVC {
 
 
 
+
+
+
 //MARK: rewards  completed collection view
 extension RewardsVC {
     
@@ -166,9 +179,9 @@ extension RewardsVC {
         //cell declare
         viewModel.rewardsList
             .asObservable()
-//            .map { objects in
-//                return objects.filter { $0.isCompleted == true }
-//            }
+            .map { objects in
+                return objects.filter { $0.isCompleted == true }
+            }
             .bind(to: rewardsCompletedCV.rx.items(cellIdentifier: RewardsCard.className, cellType: RewardsCard.self)) { (row,item,cell) in
                 //ui config
                 cell.configCell(reward: item)
@@ -197,9 +210,9 @@ extension RewardsVC {
         
         viewModel.rewardsList
             .asObservable()
-//            .map { objects in
-//                return objects.filter { $0.isCompleted == false }
-//            }
+            .map { objects in
+                return objects.filter { $0.isCompleted == false }
+            }
             .bind(to: rewardsUnCompletedCV.rx.items(cellIdentifier: RewardsCard.className, cellType: RewardsCard.self)) { (row,item,cell) in
                 //ui config
                 cell.configCell(reward: item)

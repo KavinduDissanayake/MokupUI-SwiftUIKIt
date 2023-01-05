@@ -16,7 +16,7 @@ class AFWrapper: NSObject {
     func requestGERewards(success:@escaping ([RewardsModel]) -> Void, failure:@escaping (Error) -> Void){
            
            AF.request(Constant.getBaseURL() + "/rewards", method: .get, encoding: JSONEncoding.default)
-                    .validate(statusCode: 200..<300) // for validation reuquest
+                 //   .validate(statusCode: 200..<300) // for validation reuquest
                      .responseData { response in
                          switch response.result {
                          case .failure(let error):

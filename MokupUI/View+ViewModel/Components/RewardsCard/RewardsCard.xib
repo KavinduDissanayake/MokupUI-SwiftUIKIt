@@ -9,6 +9,9 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
+        <array key="Poppins-Medium.ttf">
+            <string>Poppins-Medium</string>
+        </array>
         <array key="Poppins-Regular.ttf">
             <string>Poppins-Regular</string>
         </array>
@@ -42,25 +45,34 @@
                                                     <constraint firstAttribute="height" constant="100" id="XpT-Oa-Dgk"/>
                                                 </constraints>
                                             </imageView>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8OO-8c-zEF">
-                                                <rect key="frame" x="186" y="10" width="92" height="31"/>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3lW-fH-esc">
+                                                <rect key="frame" x="148" y="10" width="130" height="30"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NOr-kx-Efv">
+                                                        <rect key="frame" x="49" y="6.6666666666666679" width="32.333333333333343" height="17"/>
+                                                        <fontDescription key="fontDescription" name="Poppins-Medium" family="Poppins" pointSize="12"/>
+                                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
                                                 <color key="backgroundColor" name="#30a66a"/>
-                                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                <state key="normal" title="Button"/>
-                                                <buttonConfiguration key="configuration" style="plain" title="Completed">
-                                                    <fontDescription key="titleFontDescription" name="Poppins-Regular" family="Poppins" pointSize="12"/>
-                                                </buttonConfiguration>
-                                            </button>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="130" id="ItN-01-tY1"/>
+                                                    <constraint firstItem="NOr-kx-Efv" firstAttribute="centerY" secondItem="3lW-fH-esc" secondAttribute="centerY" id="PRf-Qv-rr1"/>
+                                                    <constraint firstItem="NOr-kx-Efv" firstAttribute="centerX" secondItem="3lW-fH-esc" secondAttribute="centerX" id="w8l-mr-umZ"/>
+                                                    <constraint firstAttribute="height" constant="30" id="xa6-6M-74I"/>
+                                                </constraints>
+                                            </view>
                                         </subviews>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                         <constraints>
-                                            <constraint firstItem="8OO-8c-zEF" firstAttribute="top" secondItem="2BV-nQ-nzh" secondAttribute="top" constant="10" id="1vM-IH-JQS"/>
-                                            <constraint firstAttribute="trailing" secondItem="8OO-8c-zEF" secondAttribute="trailing" constant="10" id="7Xh-cy-OEu"/>
                                             <constraint firstAttribute="trailing" secondItem="9QT-sg-se9" secondAttribute="trailing" id="DUk-dr-mwc"/>
                                             <constraint firstAttribute="height" constant="100" id="Uve-g9-Er8"/>
+                                            <constraint firstItem="3lW-fH-esc" firstAttribute="top" secondItem="2BV-nQ-nzh" secondAttribute="top" constant="10" id="XuM-PH-SYO"/>
                                             <constraint firstAttribute="bottom" secondItem="9QT-sg-se9" secondAttribute="bottom" id="Z1C-ej-xQU"/>
                                             <constraint firstItem="9QT-sg-se9" firstAttribute="leading" secondItem="2BV-nQ-nzh" secondAttribute="leading" id="bgX-wn-JVH"/>
                                             <constraint firstItem="9QT-sg-se9" firstAttribute="top" secondItem="2BV-nQ-nzh" secondAttribute="top" id="gwq-LK-UTX"/>
+                                            <constraint firstAttribute="trailing" secondItem="3lW-fH-esc" secondAttribute="trailing" constant="10" id="pNG-85-XVL"/>
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MXL-Wa-cLx">
@@ -181,11 +193,12 @@
             <color key="tintColor" name="#aeaeae"/>
             <size key="customSize" width="308" height="279"/>
             <connections>
+                <outlet property="completedBg" destination="3lW-fH-esc" id="zUG-Zv-MNk"/>
+                <outlet property="completedLbl" destination="NOr-kx-Efv" id="0OJ-eY-SV8"/>
                 <outlet property="dateLbl" destination="7ae-nh-PJu" id="Gna-Oc-9yV"/>
                 <outlet property="imageView" destination="9QT-sg-se9" id="mxC-Ia-6Hf"/>
                 <outlet property="subTitleLbl" destination="afg-L1-Zxs" id="5aM-l8-j2K"/>
                 <outlet property="titleLbl" destination="3Eg-6M-pll" id="OBD-eG-vru"/>
-                <outlet property="topBtn" destination="8OO-8c-zEF" id="mUL-vj-n9k"/>
             </connections>
             <point key="canvasLocation" x="71.755725190839698" y="134.1549295774648"/>
         </collectionViewCell>

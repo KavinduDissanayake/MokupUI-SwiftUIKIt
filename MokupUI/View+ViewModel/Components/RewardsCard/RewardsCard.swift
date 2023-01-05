@@ -13,7 +13,8 @@ class RewardsCard: UICollectionViewCell {
 
     @IBOutlet weak var imageView: UIImageView!
    
-    @IBOutlet weak var topBtn: UIButton!
+    @IBOutlet weak var completedBg: UIView!
+    @IBOutlet weak var completedLbl: UILabel!
     
     @IBOutlet weak var titleLbl: UILabel!
     
@@ -28,22 +29,31 @@ class RewardsCard: UICollectionViewCell {
     }
 
     func setupUI(){
-        topBtn.layer.cornerRadius = 8
+        completedBg.layer.cornerRadius = 8
     }
     
     func configCell(reward:RewardsModel){
-        self.imageView.sd_setImage(with: URL(string:reward.image ?? ""), placeholderImage: UIImage(named: "placeholder_image"))
+      
+        let http = reward.image ?? ""
+        let httpsUrl = "https" + http.dropFirst(4)
+        
+        self.imageView.sd_setImage(with: URL(string:httpsUrl), placeholderImage: UIImage(named: "placeholder_image"))
+    
         
         if reward.isCompleted ?? false {
-            self.topBtn.backgroundColor = UIColor(named: "#99999b")
+           
+            completedBg.backgroundColor = UIColor(named: "#30a66a")
+            completedLbl.text = "Completed"
         }else{
-            self.topBtn.backgroundColor = UIColor(named: "#30a66a")
+            completedBg.backgroundColor = UIColor(named: "#99999b")
+            completedLbl.text = "Un Completed"
         }
-        
+
+       
         titleLbl.text = reward.title ?? "N/A"
         subTitleLbl.text = reward.subTitle ?? "N/A"
-        
-        dateLbl.text = reward.expireDate ?? "N/A"
+        dateLbl.text =  "Expaires on \(Helpers.parseApiDateString(reward.expireDate ?? "N/A", format: .dateformatDMY))"
+
     }
     
 }
