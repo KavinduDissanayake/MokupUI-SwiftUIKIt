@@ -28,7 +28,10 @@
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="All" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Wjt-dg-tYX">
                                 <rect key="frame" x="75.333333333333329" y="10.333333333333334" width="16.333333333333329" height="19.666666666666664"/>
                                 <fontDescription key="fontDescription" name="Poppins-Regular" family="Poppins" pointSize="14"/>
-                                <nil key="textColor"/>
+                                <color key="textColor">
+                                    <string key="name">#b8b8b8
+</string>
+                                </color>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
@@ -62,10 +65,19 @@
                 </constraints>
             </collectionViewCellContentView>
             <size key="customSize" width="177" height="50"/>
+            <connections>
+                <outlet property="bgView" destination="xfb-U4-sYN" id="422-It-T3j"/>
+                <outlet property="titleLbl" destination="Wjt-dg-tYX" id="sxA-9n-0Mc"/>
+            </connections>
             <point key="canvasLocation" x="83.206106870229007" y="16.197183098591552"/>
         </collectionViewCell>
     </objects>
     <resources>
+        <namedColor>
+            <string key="name">#b8b8b8
+</string>
+            <color red="0.72156862745098038" green="0.72156862745098038" blue="0.72156862745098038" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
         <namedColor name="#fee7be">
             <color red="0.99607843137254903" green="0.90588235294117647" blue="0.74509803921568629" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>

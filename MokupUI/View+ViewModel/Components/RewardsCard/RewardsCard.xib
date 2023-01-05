@@ -35,7 +35,7 @@
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2BV-nQ-nzh">
                                         <rect key="frame" x="0.0" y="0.0" width="288" height="100"/>
                                         <subviews>
-                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="9QT-sg-se9">
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="placeholder_image" translatesAutoresizingMaskIntoConstraints="NO" id="9QT-sg-se9">
                                                 <rect key="frame" x="0.0" y="0.0" width="288" height="100"/>
                                                 <color key="backgroundColor" systemColor="systemBlueColor"/>
                                                 <constraints>
@@ -180,11 +180,19 @@
             </collectionViewCellContentView>
             <color key="tintColor" name="#aeaeae"/>
             <size key="customSize" width="308" height="279"/>
+            <connections>
+                <outlet property="dateLbl" destination="7ae-nh-PJu" id="Gna-Oc-9yV"/>
+                <outlet property="imageView" destination="9QT-sg-se9" id="mxC-Ia-6Hf"/>
+                <outlet property="subTitleLbl" destination="afg-L1-Zxs" id="5aM-l8-j2K"/>
+                <outlet property="titleLbl" destination="3Eg-6M-pll" id="OBD-eG-vru"/>
+                <outlet property="topBtn" destination="8OO-8c-zEF" id="mUL-vj-n9k"/>
+            </connections>
             <point key="canvasLocation" x="71.755725190839698" y="134.1549295774648"/>
         </collectionViewCell>
     </objects>
     <resources>
         <image name="ic_arrow" width="24" height="24"/>
+        <image name="placeholder_image" width="375" height="375"/>
         <namedColor name="#30a66a">
             <color red="0.18823529411764706" green="0.65098039215686276" blue="0.41568627450980394" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>

@@ -24,13 +24,15 @@ class RewardsVC: BaseVC {
     let disposeBag = DisposeBag()
     private let viewModel = RewardsVM()
     
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         setupUI()
         
         registerPromtionyCell()
-        bindRewardsCollectionView()
+        binPromtionyCollectionView()
         
         registerCategoryCell()
         bindcdCegoryCollectionView()
@@ -42,6 +44,8 @@ class RewardsVC: BaseVC {
         
         registerUnCompletedRewardsCell()
         bindcdRewardsUnCompletedCollectionView()
+        
+        getListData()
     }
     
     
@@ -52,10 +56,33 @@ extension RewardsVC {
         // 1. Get a reference to the scroll view and the content view
         categoryCV.layer.cornerRadius =  20
         promtionCV.contentInset = .zero
-
+        
         topHeaderView.addBottomRoundedEdge()
     }
 }
+
+
+//MARK: api call
+extension RewardsVC {
+    
+    func getListData(){
+        //start indicator
+        startLoading()
+        
+        viewModel.fetchRewardsList{ (sccuess,message) in
+            
+            //stop indicator
+            self.stopLoading()
+            
+            //if any failure
+            if !sccuess {
+                AlertProvider.sharedInstance.alert(view: self, title: "Error", message: message)
+            }
+            
+        }
+    }
+}
+
 
 
 //MARK: promtion collection view
@@ -65,22 +92,24 @@ extension RewardsVC {
         //register xib
         self.promtionCV.register(UINib(nibName: PromotionsCard.className, bundle: Bundle.main), forCellWithReuseIdentifier: PromotionsCard.className)
     }
-    private func bindRewardsCollectionView() {
+    private func binPromtionyCollectionView() {
         //call deleagets
         promtionCV.rx.setDelegate(self)
             .disposed(by: disposeBag)
-      
+        
         //cell declare
         viewModel.promtionList.bind(to: promtionCV.rx.items(cellIdentifier: PromotionsCard.className, cellType: PromotionsCard.self)) { (row,item,cell) in
             //ui config
-        
+            
         }.disposed(by: disposeBag)
         
+        
+      
     }
-
+    
     func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
-            let pageWidth = scrollView.frame.size.width
-            let currentPage = Int(scrollView.contentOffset.x / pageWidth)
+        let pageWidth = scrollView.frame.size.width
+        let currentPage = Int(scrollView.contentOffset.x / pageWidth)
         pageControl.currentPage = currentPage
     }
 }
@@ -100,12 +129,19 @@ extension RewardsVC {
         //call deleagets
         categoryCV.rx.setDelegate(self)
             .disposed(by: disposeBag)
-
+        
         //cell declare
-        viewModel.promtionList.bind(to: categoryCV.rx.items(cellIdentifier: CategoryCrad.className, cellType: CategoryCrad.self)) { (row,item,cell) in
+        viewModel.catgoryList.bind(to: categoryCV.rx.items(cellIdentifier: CategoryCrad.className, cellType: CategoryCrad.self)) { (row,item,cell) in
             //ui config
-
+            cell.cellConfig(model: item)
         }.disposed(by: disposeBag)
+        
+        //select
+        categoryCV.rx.itemSelected
+            .subscribe(onNext: { [weak self] indexPath in
+                self?.viewModel.toggleSelection(at: indexPath.row)
+            })
+            .disposed(by: disposeBag)
     }
     
 }
@@ -125,13 +161,18 @@ extension RewardsVC {
         //call deleagets
         rewardsCompletedCV.rx.setDelegate(self)
             .disposed(by: disposeBag)
-
+        
         
         //cell declare
-        viewModel.promtionList.bind(to: rewardsCompletedCV.rx.items(cellIdentifier: RewardsCard.className, cellType: RewardsCard.self)) { (row,item,cell) in
-            //ui config
-
-        }.disposed(by: disposeBag)
+        viewModel.rewardsList
+            .asObservable()
+//            .map { objects in
+//                return objects.filter { $0.isCompleted == true }
+//            }
+            .bind(to: rewardsCompletedCV.rx.items(cellIdentifier: RewardsCard.className, cellType: RewardsCard.self)) { (row,item,cell) in
+                //ui config
+                cell.configCell(reward: item)
+            }.disposed(by: disposeBag)
     }
     
 }
@@ -150,13 +191,21 @@ extension RewardsVC {
         //call deleagets
         rewardsUnCompletedCV.rx.setDelegate(self)
             .disposed(by: disposeBag)
-
-       
+        
+        
         //cell declare
-        viewModel.promtionList.bind(to: rewardsUnCompletedCV.rx.items(cellIdentifier: RewardsCard.className, cellType: RewardsCard.self)) { (row,item,cell) in
-            //ui config
-
-        }.disposed(by: disposeBag)
+        
+        viewModel.rewardsList
+            .asObservable()
+//            .map { objects in
+//                return objects.filter { $0.isCompleted == false }
+//            }
+            .bind(to: rewardsUnCompletedCV.rx.items(cellIdentifier: RewardsCard.className, cellType: RewardsCard.self)) { (row,item,cell) in
+                //ui config
+                cell.configCell(reward: item)
+            }.disposed(by: disposeBag)
+        
+        
     }
     
 }
@@ -168,7 +217,7 @@ extension RewardsVC : UICollectionViewDelegateFlowLayout{
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         let width = collectionView.bounds.width
-//
+        //
         if collectionView == promtionCV {
             return CGSize(width: width, height: 260)
         }else  if collectionView == categoryCV {
