@@ -14,9 +14,11 @@ class RewardsVC: BaseVC {
     //outlet
     @IBOutlet weak var topHeaderView: UIView!
     @IBOutlet weak var promtionCV: UICollectionView!
-    @IBOutlet weak var categoryCV: UICollectionView!
     @IBOutlet weak var pageControl: UIPageControl!
-    @IBOutlet weak var rewardsCV: UICollectionView!
+    @IBOutlet weak var categoryCV: UICollectionView!
+    @IBOutlet weak var rewardsCompletedCV: UICollectionView!
+    @IBOutlet weak var rewardsUnCompletedCV: UICollectionView!
+    
     
     //variable
     let disposeBag = DisposeBag()
@@ -34,8 +36,12 @@ class RewardsVC: BaseVC {
         bindcdCegoryCollectionView()
         
         
-        registerRewardsCell()
-        bindcdRewardsCollectionView()
+        registerCompletedRewardsCell()
+        bindcdRewardsCompletedCollectionView()
+        
+        
+        registerUnCompletedRewardsCell()
+        bindcdRewardsUnCompletedCollectionView()
     }
     
     
@@ -43,7 +49,10 @@ class RewardsVC: BaseVC {
 //MARK: setup UI
 extension RewardsVC {
     func setupUI(){
+        // 1. Get a reference to the scroll view and the content view
         categoryCV.layer.cornerRadius =  20
+        promtionCV.contentInset = .zero
+
         topHeaderView.addBottomRoundedEdge()
     }
 }
@@ -103,28 +112,53 @@ extension RewardsVC {
 
 
 
-//MARK: rewards collection view
+//MARK: rewards  completed collection view
 extension RewardsVC {
     
-    private func registerRewardsCell(){
+    private func registerCompletedRewardsCell(){
         //register xib
-        self.rewardsCV.register(UINib(nibName: RewardsCard.className, bundle: Bundle.main), forCellWithReuseIdentifier: RewardsCard.className)
+        self.rewardsCompletedCV.register(UINib(nibName: RewardsCard.className, bundle: Bundle.main), forCellWithReuseIdentifier: RewardsCard.className)
         
     }
     
-    private func bindcdRewardsCollectionView() {
+    private func bindcdRewardsCompletedCollectionView() {
         //call deleagets
-        rewardsCV.rx.setDelegate(self)
+        rewardsCompletedCV.rx.setDelegate(self)
             .disposed(by: disposeBag)
 
         //cell declare
-        viewModel.promtionList.bind(to: rewardsCV.rx.items(cellIdentifier: RewardsCard.className, cellType: RewardsCard.self)) { (row,item,cell) in
+        viewModel.promtionList.bind(to: rewardsCompletedCV.rx.items(cellIdentifier: RewardsCard.className, cellType: RewardsCard.self)) { (row,item,cell) in
             //ui config
 
         }.disposed(by: disposeBag)
     }
     
 }
+
+
+//MARK: rewards  un completed collection view
+extension RewardsVC {
+    
+    private func registerUnCompletedRewardsCell(){
+        //register xib
+        self.rewardsUnCompletedCV.register(UINib(nibName: RewardsCard.className, bundle: Bundle.main), forCellWithReuseIdentifier: RewardsCard.className)
+        
+    }
+    
+    private func bindcdRewardsUnCompletedCollectionView() {
+        //call deleagets
+        rewardsUnCompletedCV.rx.setDelegate(self)
+            .disposed(by: disposeBag)
+
+        //cell declare
+        viewModel.promtionList.bind(to: rewardsUnCompletedCV.rx.items(cellIdentifier: RewardsCard.className, cellType: RewardsCard.self)) { (row,item,cell) in
+            //ui config
+
+        }.disposed(by: disposeBag)
+    }
+    
+}
+
 
 
 //collectionview layout
@@ -134,12 +168,15 @@ extension RewardsVC : UICollectionViewDelegateFlowLayout{
         let width = collectionView.bounds.width
         
         if collectionView == promtionCV {
-            return CGSize(width: width, height: 250)
+            return CGSize(width: width, height: 350)
         }else  if collectionView == categoryCV {
             return CGSize(width: 100, height: 45)
-        }else  if collectionView == rewardsCV {
+        }else  if collectionView == rewardsCompletedCV {
             return CGSize(width: width*0.8, height: 180)
-        }  else  {
+        }
+        else  if collectionView == rewardsUnCompletedCV {
+            return CGSize(width: width*0.8, height: 180)
+        }else  {
             return CGSize(width: 100, height: 45)
         }
     }
