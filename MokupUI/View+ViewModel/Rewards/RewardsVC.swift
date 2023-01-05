@@ -103,6 +103,14 @@ extension RewardsVC {
             //ui config
             
         }.disposed(by: disposeBag)
+        
+        
+        //MARK: -for naviagtion
+//        promtionCV.rx.itemSelected
+//            .subscribe(onNext: { [weak self] indexPath in
+//                ASP.shared.pushToViewController(in: .Main, for:"promtionDetails", from: self,data:data)
+//            })
+//        .disposed(by: disposeBag)
     }
    
 }

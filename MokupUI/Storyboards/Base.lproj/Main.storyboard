@@ -267,7 +267,7 @@
         <!--Rewards-->
         <scene sceneID="6cU-sA-tT9">
             <objects>
-                <tabBarController title="Rewards" id="WRS-Tp-s6y" sceneMemberID="viewController">
+                <tabBarController title="Rewards" id="WRS-Tp-s6y" customClass="MainTabBar" customModule="MokupUI" customModuleProvider="target" sceneMemberID="viewController">
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="dDO-wH-s0L">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
