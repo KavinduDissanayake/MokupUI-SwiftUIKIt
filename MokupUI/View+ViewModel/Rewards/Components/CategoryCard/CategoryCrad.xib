@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="collection view cell content view" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Poppins-Regular.ttf">
+            <string>Poppins-Regular</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="aXI-IT-pV0" customClass="CategoryCrad" customModule="MokupUI" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="177" height="50"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="XZI-lM-TJk">
+                <rect key="frame" x="0.0" y="0.0" width="177" height="50"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xfb-U4-sYN" customClass="CornerView" customModule="MokupUI" customModuleProvider="target">
+                        <rect key="frame" x="5" y="5" width="167" height="40"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="All" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Wjt-dg-tYX">
+                                <rect key="frame" x="75.333333333333329" y="10.333333333333334" width="16.333333333333329" height="19.666666666666664"/>
+                                <fontDescription key="fontDescription" name="Poppins-Regular" family="Poppins" pointSize="14"/>
+                                <color key="textColor">
+                                    <string key="name">#b8b8b8
+</string>
+                                </color>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" name="#fee7be"/>
+                        <constraints>
+                            <constraint firstItem="Wjt-dg-tYX" firstAttribute="centerX" secondItem="xfb-U4-sYN" secondAttribute="centerX" id="V8P-Nl-E5N"/>
+                            <constraint firstItem="Wjt-dg-tYX" firstAttribute="centerY" secondItem="xfb-U4-sYN" secondAttribute="centerY" id="gmm-RE-xQ4"/>
+                        </constraints>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="number" keyPath="leftTopRadius">
+                                <real key="value" value="15"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="number" keyPath="rightTopRadius">
+                                <real key="value" value="15"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="number" keyPath="rightBottomRadius">
+                                <real key="value" value="15"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="number" keyPath="leftBottomRadius">
+                                <real key="value" value="15"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                    </view>
+                </subviews>
+                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                <constraints>
+                    <constraint firstAttribute="bottom" secondItem="xfb-U4-sYN" secondAttribute="bottom" constant="5" id="5h1-Ue-Lhh"/>
+                    <constraint firstAttribute="trailing" secondItem="xfb-U4-sYN" secondAttribute="trailing" constant="5" id="E1g-g1-XqM"/>
+                    <constraint firstItem="xfb-U4-sYN" firstAttribute="top" secondItem="XZI-lM-TJk" secondAttribute="top" constant="5" id="StA-qg-fib"/>
+                    <constraint firstItem="xfb-U4-sYN" firstAttribute="leading" secondItem="XZI-lM-TJk" secondAttribute="leading" constant="5" id="j0R-E7-o24"/>
+                </constraints>
+            </collectionViewCellContentView>
+            <size key="customSize" width="177" height="50"/>
+            <connections>
+                <outlet property="bgView" destination="xfb-U4-sYN" id="422-It-T3j"/>
+                <outlet property="titleLbl" destination="Wjt-dg-tYX" id="sxA-9n-0Mc"/>
+            </connections>
+            <point key="canvasLocation" x="83.206106870229007" y="16.197183098591552"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <namedColor>
+            <string key="name">#b8b8b8
+</string>
+            <color red="0.72156862745098038" green="0.72156862745098038" blue="0.72156862745098038" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="#fee7be">
+            <color red="0.99607843137254903" green="0.90588235294117647" blue="0.74509803921568629" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>
