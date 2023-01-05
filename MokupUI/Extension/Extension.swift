@@ -7,6 +7,16 @@
 
 import UIKit
 
+
+extension NSObject {
+    class var className: String {
+        return String(describing: self)
+    }
+}
+
+
+
+
 @IBDesignable extension UIView {
     @IBInspectable var shadowRadius: CGFloat {
         get { return layer.shadowRadius }

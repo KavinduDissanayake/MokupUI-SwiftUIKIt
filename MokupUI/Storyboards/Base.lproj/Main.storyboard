@@ -9,14 +9,8 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
-        <array key="Poppins-Bold.ttf">
-            <string>Poppins-Bold</string>
-        </array>
         <array key="Poppins-Regular.ttf">
             <string>Poppins-Regular</string>
-        </array>
-        <array key="Poppins-SemiBold.ttf">
-            <string>Poppins-SemiBold</string>
         </array>
     </customFonts>
     <scenes>
@@ -113,84 +107,37 @@
                                                     <constraint firstItem="ihs-mp-uCn" firstAttribute="centerY" secondItem="Pvf-Zl-gkl" secondAttribute="centerY" id="wMT-jR-I1F"/>
                                                 </constraints>
                                             </view>
-                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" translatesAutoresizingMaskIntoConstraints="NO" id="oFk-Nv-yfe">
-                                                <rect key="frame" x="20" y="111" width="374" height="328.5"/>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="5fW-NU-6W3">
+                                                <rect key="frame" x="10" y="115" width="394" height="255"/>
                                                 <subviews>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HNL-gI-yfg">
-                                                        <rect key="frame" x="0.0" y="0.0" width="374" height="80"/>
+                                                    <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="l2B-6F-zbg">
+                                                        <rect key="frame" x="0.0" y="0.0" width="394" height="229"/>
                                                         <color key="backgroundColor" systemColor="systemRedColor"/>
-                                                        <constraints>
-                                                            <constraint firstAttribute="height" constant="80" id="1ox-jZ-gui"/>
-                                                        </constraints>
-                                                        <string key="text">UNION  
-ASSURANCE</string>
-                                                        <fontDescription key="fontDescription" name="Poppins-Bold" family="Poppins" pointSize="22"/>
-                                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                        <nil key="highlightedColor"/>
-                                                    </label>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Insurance cover from union assurance" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gYZ-VZ-Pos">
-                                                        <rect key="frame" x="0.0" y="80" width="374" height="20"/>
-                                                        <constraints>
-                                                            <constraint firstAttribute="height" relation="lessThanOrEqual" constant="50" id="ehJ-GO-h6k"/>
-                                                            <constraint firstAttribute="height" constant="20" id="vQK-zH-PJw"/>
-                                                        </constraints>
-                                                        <fontDescription key="fontDescription" name="Poppins-Regular" family="Poppins" pointSize="15"/>
-                                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                        <nil key="highlightedColor"/>
-                                                    </label>
-                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Czc-dy-QXy">
-                                                        <rect key="frame" x="0.0" y="100" width="374" height="228.5"/>
-                                                        <subviews>
-                                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gzK-bW-b9g" customClass="CornerView" customModule="MokupUI" customModuleProvider="target">
-                                                                <rect key="frame" x="67" y="30" width="240" height="40"/>
-                                                                <subviews>
-                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Insurance Cover" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8Wl-9f-Nc1">
-                                                                        <rect key="frame" x="61.5" y="10" width="117.5" height="20"/>
-                                                                        <fontDescription key="fontDescription" name="Poppins-SemiBold" family="Poppins" pointSize="14"/>
-                                                                        <color key="textColor" name="#fdaf27"/>
-                                                                        <nil key="highlightedColor"/>
-                                                                    </label>
-                                                                </subviews>
-                                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                                <constraints>
-                                                                    <constraint firstItem="8Wl-9f-Nc1" firstAttribute="centerY" secondItem="gzK-bW-b9g" secondAttribute="centerY" id="IIo-wE-qRw"/>
-                                                                    <constraint firstItem="8Wl-9f-Nc1" firstAttribute="centerX" secondItem="gzK-bW-b9g" secondAttribute="centerX" id="bPv-ST-Ryc"/>
-                                                                    <constraint firstAttribute="height" constant="40" id="rqI-F0-5gH"/>
-                                                                </constraints>
-                                                                <userDefinedRuntimeAttributes>
-                                                                    <userDefinedRuntimeAttribute type="number" keyPath="rightTopRadius">
-                                                                        <real key="value" value="20"/>
-                                                                    </userDefinedRuntimeAttribute>
-                                                                    <userDefinedRuntimeAttribute type="number" keyPath="rightBottomRadius">
-                                                                        <real key="value" value="20"/>
-                                                                    </userDefinedRuntimeAttribute>
-                                                                    <userDefinedRuntimeAttribute type="number" keyPath="leftBottomRadius">
-                                                                        <real key="value" value="20"/>
-                                                                    </userDefinedRuntimeAttribute>
-                                                                    <userDefinedRuntimeAttribute type="number" keyPath="leftTopRadius">
-                                                                        <real key="value" value="20"/>
-                                                                    </userDefinedRuntimeAttribute>
-                                                                </userDefinedRuntimeAttributes>
-                                                            </view>
-                                                        </subviews>
-                                                        <constraints>
-                                                            <constraint firstItem="gzK-bW-b9g" firstAttribute="leading" secondItem="Czc-dy-QXy" secondAttribute="leading" constant="67" id="2vc-lL-ghi"/>
-                                                            <constraint firstItem="gzK-bW-b9g" firstAttribute="top" secondItem="Czc-dy-QXy" secondAttribute="top" constant="30" id="Awm-Df-m3u"/>
-                                                            <constraint firstAttribute="trailing" secondItem="gzK-bW-b9g" secondAttribute="trailing" constant="67" id="dXZ-5O-5KP"/>
-                                                            <constraint firstItem="gzK-bW-b9g" firstAttribute="centerX" secondItem="Czc-dy-QXy" secondAttribute="centerX" id="qOY-Rd-gPg"/>
-                                                        </constraints>
-                                                    </view>
+                                                        <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="qlq-VI-Kcd">
+                                                            <size key="itemSize" width="128" height="128"/>
+                                                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                                        </collectionViewFlowLayout>
+                                                        <cells/>
+                                                    </collectionView>
+                                                    <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="bPJ-gw-FWS">
+                                                        <rect key="frame" x="0.0" y="229" width="394" height="26"/>
+                                                        <color key="backgroundColor" name="AccentColor"/>
+                                                    </pageControl>
                                                 </subviews>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             </stackView>
                                         </subviews>
                                         <color key="backgroundColor" name="#fdaf27"/>
                                         <constraints>
-                                            <constraint firstItem="oFk-Nv-yfe" firstAttribute="top" secondItem="Pvf-Zl-gkl" secondAttribute="bottom" constant="6" id="7Lu-Pv-YxN"/>
-                                            <constraint firstAttribute="trailing" secondItem="oFk-Nv-yfe" secondAttribute="trailing" constant="20" id="BXi-M8-hyj"/>
+                                            <constraint firstItem="5fW-NU-6W3" firstAttribute="leading" secondItem="kNe-dQ-BMk" secondAttribute="leading" constant="10" id="A64-xT-umj"/>
                                             <constraint firstItem="Pvf-Zl-gkl" firstAttribute="leading" secondItem="kNe-dQ-BMk" secondAttribute="leading" id="CQh-kc-fo6"/>
+                                            <constraint firstItem="5fW-NU-6W3" firstAttribute="top" secondItem="Pvf-Zl-gkl" secondAttribute="bottom" constant="10" id="Ewn-bu-34Q"/>
                                             <constraint firstItem="Pvf-Zl-gkl" firstAttribute="top" secondItem="kNe-dQ-BMk" secondAttribute="top" constant="55" id="J6B-9l-Mmp"/>
                                             <constraint firstAttribute="trailing" secondItem="Pvf-Zl-gkl" secondAttribute="trailing" id="MN0-2d-kww"/>
-                                            <constraint firstItem="oFk-Nv-yfe" firstAttribute="leading" secondItem="kNe-dQ-BMk" secondAttribute="leading" constant="20" id="Qc3-vL-qrl"/>
+                                            <constraint firstAttribute="bottom" secondItem="5fW-NU-6W3" secondAttribute="bottom" constant="30" id="PUS-dQ-wFA"/>
+                                            <constraint firstAttribute="trailing" secondItem="5fW-NU-6W3" secondAttribute="trailing" constant="10" id="TMl-2g-uMd"/>
                                             <constraint firstAttribute="height" constant="400" id="z6V-cD-23B"/>
                                         </constraints>
                                     </view>
@@ -214,6 +161,7 @@ ASSURANCE</string>
                     </view>
                     <tabBarItem key="tabBarItem" title="Home" id="vlv-W8-baH"/>
                     <connections>
+                        <outlet property="promtionCV" destination="l2B-6F-zbg" id="DLo-Id-4iS"/>
                         <outlet property="topHeaderView" destination="kNe-dQ-BMk" id="qQ7-oB-Vld"/>
                     </connections>
                 </viewController>
@@ -303,6 +251,9 @@ ASSURANCE</string>
         <image name="ic_notification" width="24" height="24"/>
         <namedColor name="#fdaf27">
             <color red="1" green="0.69803921568627447" blue="0.17647058823529413" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="AccentColor">
+            <color red="0.0" green="0.46000000000000002" blue="0.89000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

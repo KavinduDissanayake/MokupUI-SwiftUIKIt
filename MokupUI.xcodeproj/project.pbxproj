@@ -83,13 +83,13 @@
 		CF56F9DA2965C9370066265A /* MokupUI */ = {
 			isa = PBXGroup;
 			children = (
+				CFDE068429667E960088973C /* Utilities */,
+				CFDE068329667E860088973C /* Repository */,
+				CFDE068229667E690088973C /* App */,
 				CFDE067A296665160088973C /* View+ViewModel */,
 				CFDE0677296664B20088973C /* SubView */,
 				CFDE06762966648D0088973C /* Extension */,
-				CF0EB835296653D100D4285C /* Fonts */,
 				CF56F9EF2965CAAD0066265A /* Storyboards */,
-				CF56F9DB2965C9370066265A /* AppDelegate.swift */,
-				CF56F9DD2965C9370066265A /* SceneDelegate.swift */,
 				CF56F9E42965C9390066265A /* Assets.xcassets */,
 				CF56F9E92965C9390066265A /* Info.plist */,
 			);
@@ -137,6 +137,30 @@
 				CFDE067F296676B30088973C /* PromotionsCard.xib */,
 			);
 			path = Components;
+			sourceTree = "<group>";
+		};
+		CFDE068229667E690088973C /* App */ = {
+			isa = PBXGroup;
+			children = (
+				CF56F9DD2965C9370066265A /* SceneDelegate.swift */,
+				CF56F9DB2965C9370066265A /* AppDelegate.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		CFDE068329667E860088973C /* Repository */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Repository;
+			sourceTree = "<group>";
+		};
+		CFDE068429667E960088973C /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				CF0EB835296653D100D4285C /* Fonts */,
+			);
+			path = Utilities;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
