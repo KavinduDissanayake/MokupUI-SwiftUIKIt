@@ -39,7 +39,6 @@ class RewardsCard: UICollectionViewCell {
         
         self.imageView.sd_setImage(with: URL(string:httpsUrl), placeholderImage: UIImage(named: "placeholder_image"))
     
-        
         if reward.isCompleted ?? false {
            
             completedBg.backgroundColor = UIColor(named: "#30a66a")

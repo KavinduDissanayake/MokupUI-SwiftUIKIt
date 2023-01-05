@@ -5,6 +5,7 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
@@ -13,6 +14,38 @@
         </array>
     </customFonts>
     <scenes>
+        <!--Home-->
+        <scene sceneID="LIM-oC-BOn">
+            <objects>
+                <viewController id="OGa-aN-zLk" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="fy6-pj-5OY">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="o0D-Ab-nDe"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Home" image="ic_home" id="tEQ-Cu-3d8"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="geC-Qz-agK" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-2084" y="110"/>
+        </scene>
+        <!--Challenges-->
+        <scene sceneID="1CX-fO-97X">
+            <objects>
+                <viewController id="ldc-eY-khl" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="hXa-Ah-OUI">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="hSa-d0-TTd"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Challenges" image="ic_challenges" id="wfa-EK-TZh"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3A4-38-OYP" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1304" y="110"/>
+        </scene>
         <!--Item-->
         <scene sceneID="2ae-oT-gZ5">
             <objects>
@@ -200,7 +233,7 @@
                             <constraint firstAttribute="bottom" secondItem="BoL-2U-pQh" secondAttribute="bottom" id="tf9-3U-fAF"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item" id="cq4-ej-Jc7"/>
+                    <tabBarItem key="tabBarItem" title="Item" image="ic_rewards" id="cq4-ej-Jc7"/>
                     <size key="freeformSize" width="414" height="896"/>
                     <connections>
                         <outlet property="categoryCV" destination="qsP-BZ-bIo" id="Rrk-OA-rKr"/>
@@ -213,33 +246,78 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ad2-1z-awf" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-433" y="104"/>
+            <point key="canvasLocation" x="-438" y="110"/>
         </scene>
-        <!--Tab Bar Controller-->
+        <!--Leaderboard -->
+        <scene sceneID="7NN-yI-ksY">
+            <objects>
+                <viewController title="Leaderboard " id="tsb-Es-gmu" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="SrP-6S-WDd">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="SYM-0y-Qpc"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Item" image="ic_leaderboard" id="lzW-dy-Yo6"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="VWe-7B-tYJ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="374" y="109"/>
+        </scene>
+        <!--Rewards-->
         <scene sceneID="6cU-sA-tT9">
             <objects>
-                <tabBarController id="WRS-Tp-s6y" sceneMemberID="viewController">
+                <tabBarController title="Rewards" id="WRS-Tp-s6y" sceneMemberID="viewController">
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="dDO-wH-s0L">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="tintColor" name="#fdaf27"/>
                     </tabBar>
                     <connections>
-                        <segue destination="7NL-8Q-vBl" kind="relationship" relationship="viewControllers" id="ABf-UQ-iMB"/>
+                        <segue destination="OGa-aN-zLk" kind="relationship" relationship="viewControllers" id="Qat-jU-cFH"/>
+                        <segue destination="ldc-eY-khl" kind="relationship" relationship="viewControllers" id="NGH-gI-kzq"/>
+                        <segue destination="7NL-8Q-vBl" kind="relationship" relationship="viewControllers" id="65d-Zg-Y23"/>
+                        <segue destination="tsb-Es-gmu" kind="relationship" relationship="viewControllers" id="2JF-fE-fE8"/>
+                        <segue destination="Ib2-kj-hBO" kind="relationship" relationship="viewControllers" id="d63-T3-HqU"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="QHH-K7-Yj8" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-815" y="-611"/>
         </scene>
+        <!--Profile-->
+        <scene sceneID="g8j-xv-G5B">
+            <objects>
+                <viewController id="Ib2-kj-hBO" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="l9j-lo-Uqt">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="JFc-U4-ywG"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Profile" image="ic_profile" id="Nab-qr-4Kc"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fif-WI-1W2" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1119" y="109"/>
+        </scene>
     </scenes>
     <resources>
+        <image name="ic_challenges" width="24" height="24"/>
+        <image name="ic_home" width="24" height="24"/>
+        <image name="ic_leaderboard" width="24" height="24"/>
         <image name="ic_notification" width="24" height="24"/>
+        <image name="ic_profile" width="24" height="24"/>
+        <image name="ic_rewards" width="24" height="24"/>
         <namedColor name="#f6f7fc">
             <color red="0.96470588235294119" green="0.96862745098039216" blue="0.9882352941176471" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="#fdaf27">
             <color red="1" green="0.69803921568627447" blue="0.17647058823529413" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
     </resources>
 </document>

@@ -183,8 +183,8 @@
 		CF56F9DA2965C9370066265A /* MokupUI */ = {
 			isa = PBXGroup;
 			children = (
-				CF55A9C3296684BC006FBD26 /* Base */,
 				CFDE068229667E690088973C /* App */,
+				CF55A9C3296684BC006FBD26 /* Base */,
 				CF56F9EF2965CAAD0066265A /* Storyboards */,
 				CFDE067A296665160088973C /* View+ViewModel */,
 				CFDE068429667E960088973C /* Utilities */,
@@ -224,6 +224,23 @@
 			path = RewardsCard;
 			sourceTree = "<group>";
 		};
+		CFC7E77A29677588008D8604 /* Rewards */ = {
+			isa = PBXGroup;
+			children = (
+				CFDE067B296676700088973C /* Components */,
+				CF56F9DF2965C9370066265A /* RewardsVC.swift */,
+				CF55A9CA2966851A006FBD26 /* RewardsVM.swift */,
+			);
+			path = Rewards;
+			sourceTree = "<group>";
+		};
+		CFC7E77D296775E1008D8604 /* TabBar */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = TabBar;
+			sourceTree = "<group>";
+		};
 		CFDE06762966648D0088973C /* Extension */ = {
 			isa = PBXGroup;
 			children = (
@@ -244,9 +261,8 @@
 		CFDE067A296665160088973C /* View+ViewModel */ = {
 			isa = PBXGroup;
 			children = (
-				CFDE067B296676700088973C /* Components */,
-				CF56F9DF2965C9370066265A /* RewardsVC.swift */,
-				CF55A9CA2966851A006FBD26 /* RewardsVM.swift */,
+				CFC7E77D296775E1008D8604 /* TabBar */,
+				CFC7E77A29677588008D8604 /* Rewards */,
 			);
 			path = "View+ViewModel";
 			sourceTree = "<group>";

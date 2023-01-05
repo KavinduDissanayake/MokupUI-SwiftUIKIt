@@ -10,21 +10,13 @@ import Foundation
 
 // MARK: - RewardsModel
 struct RewardsModel: Codable {
-    let title: String?
-    let subTitle: String?
-    let isCompleted: Bool?
-    let expireDate: String?
-    let image: String?
-    let id: String?
-    
-    enum CodingKeys: String, CodingKey {
-        case title = "title"
-        case subTitle = "sub_title"
-        case isCompleted = "is_completed"
-        case expireDate = "expire_date"
-        case image = "image"
-        case id = "id"
-    }
+    var title: String?
+    var subTitle: String?
+    var isCompleted: Bool?
+    var expireDate: String?
+    var image: String?
+    var id: String?
 }
+
 
 typealias RewardsResponse = [RewardsModel]
