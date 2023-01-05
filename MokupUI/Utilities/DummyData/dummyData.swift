@@ -8,8 +8,7 @@
 import Foundation
 let samplePromtion = PromtionModel(title: "Test", subTitle: "Test")
 
-let sameplePromotArrayList = [
-
+let sameplePromotArrayList:[PromtionModel] = [
     samplePromtion,
     samplePromtion,
     samplePromtion,

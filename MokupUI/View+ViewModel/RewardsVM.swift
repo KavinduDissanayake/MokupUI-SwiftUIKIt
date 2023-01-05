@@ -10,8 +10,8 @@ import RxSwift
 import RxCocoa
 
 class RewardsVM: BaseVM {
-    
-    var promtionList = Observable<[PromtionModel]>.of(
+  
+    var promtionList = PublishRelay<[PromtionModel]>.of(
         sameplePromotArrayList
       )
     override init() {

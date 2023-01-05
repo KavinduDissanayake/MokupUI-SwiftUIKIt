@@ -126,6 +126,7 @@ extension RewardsVC {
         rewardsCompletedCV.rx.setDelegate(self)
             .disposed(by: disposeBag)
 
+        
         //cell declare
         viewModel.promtionList.bind(to: rewardsCompletedCV.rx.items(cellIdentifier: RewardsCard.className, cellType: RewardsCard.self)) { (row,item,cell) in
             //ui config
@@ -150,6 +151,7 @@ extension RewardsVC {
         rewardsUnCompletedCV.rx.setDelegate(self)
             .disposed(by: disposeBag)
 
+       
         //cell declare
         viewModel.promtionList.bind(to: rewardsUnCompletedCV.rx.items(cellIdentifier: RewardsCard.className, cellType: RewardsCard.self)) { (row,item,cell) in
             //ui config
@@ -166,16 +168,16 @@ extension RewardsVC : UICollectionViewDelegateFlowLayout{
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         let width = collectionView.bounds.width
-        
+//
         if collectionView == promtionCV {
-            return CGSize(width: width, height: 350)
+            return CGSize(width: width, height: 260)
         }else  if collectionView == categoryCV {
             return CGSize(width: 100, height: 45)
         }else  if collectionView == rewardsCompletedCV {
-            return CGSize(width: width*0.8, height: 180)
+            return CGSize(width: width*0.8, height: 250)
         }
         else  if collectionView == rewardsUnCompletedCV {
-            return CGSize(width: width*0.8, height: 180)
+            return CGSize(width: width*0.8, height: 250)
         }else  {
             return CGSize(width: 100, height: 45)
         }
