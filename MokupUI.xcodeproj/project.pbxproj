@@ -7,39 +7,69 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9BFCD724335A6D567BD5D528 /* Pods_MokupUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B688ECF9B3252CDDC8E2A7BF /* Pods_MokupUI.framework */; };
 		CF0EB83A296653F000D4285C /* Poppins-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CF0EB836296653F000D4285C /* Poppins-Regular.ttf */; };
 		CF0EB83B296653F000D4285C /* Poppins-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CF0EB837296653F000D4285C /* Poppins-Medium.ttf */; };
 		CF0EB83C296653F000D4285C /* Poppins-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CF0EB838296653F000D4285C /* Poppins-Bold.ttf */; };
 		CF0EB83D296653F000D4285C /* Poppins-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CF0EB839296653F000D4285C /* Poppins-SemiBold.ttf */; };
+		CF55A9BA296681F2006FBD26 /* AlertProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF55A9B9296681F2006FBD26 /* AlertProvider.swift */; };
+		CF55A9BC2966820B006FBD26 /* NetworkRechability.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF55A9BB2966820B006FBD26 /* NetworkRechability.swift */; };
+		CF55A9BE29668224006FBD26 /* ApplicationServiceProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF55A9BD29668224006FBD26 /* ApplicationServiceProvider.swift */; };
+		CF55A9C029668308006FBD26 /* Handlers.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF55A9BF29668308006FBD26 /* Handlers.swift */; };
+		CF55A9C229668323006FBD26 /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF55A9C129668323006FBD26 /* Constant.swift */; };
+		CF55A9C5296684C7006FBD26 /* BaseVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF55A9C4296684C7006FBD26 /* BaseVM.swift */; };
+		CF55A9C7296684D8006FBD26 /* BaseVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF55A9C6296684D8006FBD26 /* BaseVC.swift */; };
+		CF55A9C9296684F5006FBD26 /* LoadingIndicatorDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF55A9C8296684F5006FBD26 /* LoadingIndicatorDelegate.swift */; };
+		CF55A9CB2966851A006FBD26 /* RewardsVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF55A9CA2966851A006FBD26 /* RewardsVM.swift */; };
+		CF55A9CE29668589006FBD26 /* PromtionModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF55A9CD29668589006FBD26 /* PromtionModel.swift */; };
+		CF55A9D12966863A006FBD26 /* dummyData.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF55A9D02966863A006FBD26 /* dummyData.swift */; };
 		CF56F9DC2965C9370066265A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF56F9DB2965C9370066265A /* AppDelegate.swift */; };
 		CF56F9DE2965C9370066265A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF56F9DD2965C9370066265A /* SceneDelegate.swift */; };
-		CF56F9E02965C9370066265A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF56F9DF2965C9370066265A /* ViewController.swift */; };
+		CF56F9E02965C9370066265A /* RewardsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF56F9DF2965C9370066265A /* RewardsVC.swift */; };
 		CF56F9E32965C9370066265A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CF56F9E12965C9370066265A /* Main.storyboard */; };
 		CF56F9E52965C9390066265A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CF56F9E42965C9390066265A /* Assets.xcassets */; };
 		CF56F9E82965C9390066265A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CF56F9E62965C9390066265A /* LaunchScreen.storyboard */; };
+		CFAF1AE229669BC7002BAD33 /* PromotionsCard.xib in Resources */ = {isa = PBXBuildFile; fileRef = CFAF1AE129669BC7002BAD33 /* PromotionsCard.xib */; };
+		CFAF1AE629669C2F002BAD33 /* CategoryCrad.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFAF1AE429669C2F002BAD33 /* CategoryCrad.swift */; };
+		CFAF1AE729669C2F002BAD33 /* CategoryCrad.xib in Resources */ = {isa = PBXBuildFile; fileRef = CFAF1AE529669C2F002BAD33 /* CategoryCrad.xib */; };
 		CFDE0675296662340088973C /* Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFDE0674296662340088973C /* Extension.swift */; };
 		CFDE0679296664C40088973C /* CornerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFDE0678296664C40088973C /* CornerView.swift */; };
 		CFDE0680296676B30088973C /* PromotionsCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFDE067E296676B30088973C /* PromotionsCard.swift */; };
-		CFDE0681296676B30088973C /* PromotionsCard.xib in Resources */ = {isa = PBXBuildFile; fileRef = CFDE067F296676B30088973C /* PromotionsCard.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		79FF64DD6C0E0510CD7EC89C /* Pods-MokupUI.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MokupUI.release.xcconfig"; path = "Target Support Files/Pods-MokupUI/Pods-MokupUI.release.xcconfig"; sourceTree = "<group>"; };
+		9CCAA666BAAA1D486BCE2744 /* Pods-MokupUI.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MokupUI.debug.xcconfig"; path = "Target Support Files/Pods-MokupUI/Pods-MokupUI.debug.xcconfig"; sourceTree = "<group>"; };
+		B688ECF9B3252CDDC8E2A7BF /* Pods_MokupUI.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MokupUI.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CF0EB836296653F000D4285C /* Poppins-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-Regular.ttf"; sourceTree = "<group>"; };
 		CF0EB837296653F000D4285C /* Poppins-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-Medium.ttf"; sourceTree = "<group>"; };
 		CF0EB838296653F000D4285C /* Poppins-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-Bold.ttf"; sourceTree = "<group>"; };
 		CF0EB839296653F000D4285C /* Poppins-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-SemiBold.ttf"; sourceTree = "<group>"; };
+		CF55A9B9296681F2006FBD26 /* AlertProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertProvider.swift; sourceTree = "<group>"; };
+		CF55A9BB2966820B006FBD26 /* NetworkRechability.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkRechability.swift; sourceTree = "<group>"; };
+		CF55A9BD29668224006FBD26 /* ApplicationServiceProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApplicationServiceProvider.swift; sourceTree = "<group>"; };
+		CF55A9BF29668308006FBD26 /* Handlers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Handlers.swift; sourceTree = "<group>"; };
+		CF55A9C129668323006FBD26 /* Constant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
+		CF55A9C4296684C7006FBD26 /* BaseVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseVM.swift; sourceTree = "<group>"; };
+		CF55A9C6296684D8006FBD26 /* BaseVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseVC.swift; sourceTree = "<group>"; };
+		CF55A9C8296684F5006FBD26 /* LoadingIndicatorDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingIndicatorDelegate.swift; sourceTree = "<group>"; };
+		CF55A9CA2966851A006FBD26 /* RewardsVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RewardsVM.swift; sourceTree = "<group>"; };
+		CF55A9CD29668589006FBD26 /* PromtionModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PromtionModel.swift; sourceTree = "<group>"; };
+		CF55A9D02966863A006FBD26 /* dummyData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = dummyData.swift; sourceTree = "<group>"; };
 		CF56F9D82965C9370066265A /* MokupUI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MokupUI.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CF56F9DB2965C9370066265A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CF56F9DD2965C9370066265A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		CF56F9DF2965C9370066265A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		CF56F9DF2965C9370066265A /* RewardsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RewardsVC.swift; sourceTree = "<group>"; };
 		CF56F9E22965C9370066265A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		CF56F9E42965C9390066265A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CF56F9E72965C9390066265A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CF56F9E92965C9390066265A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CFAF1AE129669BC7002BAD33 /* PromotionsCard.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = PromotionsCard.xib; path = ../../../../../../../Desktop/PromotionsCard.xib; sourceTree = "<group>"; };
+		CFAF1AE429669C2F002BAD33 /* CategoryCrad.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryCrad.swift; sourceTree = "<group>"; };
+		CFAF1AE529669C2F002BAD33 /* CategoryCrad.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CategoryCrad.xib; sourceTree = "<group>"; };
 		CFDE0674296662340088973C /* Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extension.swift; sourceTree = "<group>"; };
 		CFDE0678296664C40088973C /* CornerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CornerView.swift; sourceTree = "<group>"; };
 		CFDE067E296676B30088973C /* PromotionsCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PromotionsCard.swift; sourceTree = "<group>"; };
-		CFDE067F296676B30088973C /* PromotionsCard.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PromotionsCard.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -47,12 +77,30 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9BFCD724335A6D567BD5D528 /* Pods_MokupUI.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		7F24DC1A2E8C436CD0ADAC1F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				B688ECF9B3252CDDC8E2A7BF /* Pods_MokupUI.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		8ED4F40AB14F64B9ADDFD9DB /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				9CCAA666BAAA1D486BCE2744 /* Pods-MokupUI.debug.xcconfig */,
+				79FF64DD6C0E0510CD7EC89C /* Pods-MokupUI.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		CF0EB835296653D100D4285C /* Fonts */ = {
 			isa = PBXGroup;
 			children = (
@@ -64,11 +112,47 @@
 			path = Fonts;
 			sourceTree = "<group>";
 		};
+		CF55A9C3296684BC006FBD26 /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				CF55A9C4296684C7006FBD26 /* BaseVM.swift */,
+				CF55A9C6296684D8006FBD26 /* BaseVC.swift */,
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
+		CF55A9CC29668574006FBD26 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				CF55A9CD29668589006FBD26 /* PromtionModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		CF55A9CF29668628006FBD26 /* DummyData */ = {
+			isa = PBXGroup;
+			children = (
+				CF55A9D02966863A006FBD26 /* dummyData.swift */,
+			);
+			path = DummyData;
+			sourceTree = "<group>";
+		};
+		CF55A9D229669B61006FBD26 /* PromotionsCard */ = {
+			isa = PBXGroup;
+			children = (
+				CFDE067E296676B30088973C /* PromotionsCard.swift */,
+				CFAF1AE129669BC7002BAD33 /* PromotionsCard.xib */,
+			);
+			path = PromotionsCard;
+			sourceTree = "<group>";
+		};
 		CF56F9CF2965C9370066265A = {
 			isa = PBXGroup;
 			children = (
 				CF56F9DA2965C9370066265A /* MokupUI */,
 				CF56F9D92965C9370066265A /* Products */,
+				8ED4F40AB14F64B9ADDFD9DB /* Pods */,
+				7F24DC1A2E8C436CD0ADAC1F /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -83,13 +167,14 @@
 		CF56F9DA2965C9370066265A /* MokupUI */ = {
 			isa = PBXGroup;
 			children = (
+				CF55A9C3296684BC006FBD26 /* Base */,
+				CFDE068229667E690088973C /* App */,
+				CF56F9EF2965CAAD0066265A /* Storyboards */,
+				CFDE067A296665160088973C /* View+ViewModel */,
 				CFDE068429667E960088973C /* Utilities */,
 				CFDE068329667E860088973C /* Repository */,
-				CFDE068229667E690088973C /* App */,
-				CFDE067A296665160088973C /* View+ViewModel */,
 				CFDE0677296664B20088973C /* SubView */,
 				CFDE06762966648D0088973C /* Extension */,
-				CF56F9EF2965CAAD0066265A /* Storyboards */,
 				CF56F9E42965C9390066265A /* Assets.xcassets */,
 				CF56F9E92965C9390066265A /* Info.plist */,
 			);
@@ -103,6 +188,15 @@
 				CF56F9E12965C9370066265A /* Main.storyboard */,
 			);
 			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		CFAF1AE329669BEC002BAD33 /* Category */ = {
+			isa = PBXGroup;
+			children = (
+				CFAF1AE429669C2F002BAD33 /* CategoryCrad.swift */,
+				CFAF1AE529669C2F002BAD33 /* CategoryCrad.xib */,
+			);
+			path = Category;
 			sourceTree = "<group>";
 		};
 		CFDE06762966648D0088973C /* Extension */ = {
@@ -125,7 +219,8 @@
 			isa = PBXGroup;
 			children = (
 				CFDE067B296676700088973C /* Components */,
-				CF56F9DF2965C9370066265A /* ViewController.swift */,
+				CF56F9DF2965C9370066265A /* RewardsVC.swift */,
+				CF55A9CA2966851A006FBD26 /* RewardsVM.swift */,
 			);
 			path = "View+ViewModel";
 			sourceTree = "<group>";
@@ -133,8 +228,8 @@
 		CFDE067B296676700088973C /* Components */ = {
 			isa = PBXGroup;
 			children = (
-				CFDE067E296676B30088973C /* PromotionsCard.swift */,
-				CFDE067F296676B30088973C /* PromotionsCard.xib */,
+				CFAF1AE329669BEC002BAD33 /* Category */,
+				CF55A9D229669B61006FBD26 /* PromotionsCard */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -151,6 +246,7 @@
 		CFDE068329667E860088973C /* Repository */ = {
 			isa = PBXGroup;
 			children = (
+				CF55A9CC29668574006FBD26 /* Model */,
 			);
 			path = Repository;
 			sourceTree = "<group>";
@@ -158,7 +254,14 @@
 		CFDE068429667E960088973C /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
+				CF55A9CF29668628006FBD26 /* DummyData */,
 				CF0EB835296653D100D4285C /* Fonts */,
+				CF55A9B9296681F2006FBD26 /* AlertProvider.swift */,
+				CF55A9BB2966820B006FBD26 /* NetworkRechability.swift */,
+				CF55A9BD29668224006FBD26 /* ApplicationServiceProvider.swift */,
+				CF55A9BF29668308006FBD26 /* Handlers.swift */,
+				CF55A9C129668323006FBD26 /* Constant.swift */,
+				CF55A9C8296684F5006FBD26 /* LoadingIndicatorDelegate.swift */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -170,9 +273,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = CF56F9EC2965C9390066265A /* Build configuration list for PBXNativeTarget "MokupUI" */;
 			buildPhases = (
+				0D3AF5DEF4E9EFB6708AAEB5 /* [CP] Check Pods Manifest.lock */,
 				CF56F9D42965C9370066265A /* Sources */,
 				CF56F9D52965C9370066265A /* Frameworks */,
 				CF56F9D62965C9370066265A /* Resources */,
+				E8A5407B8E97E524A3D099FD /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -221,6 +326,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CFAF1AE729669C2F002BAD33 /* CategoryCrad.xib in Resources */,
 				CF56F9E82965C9390066265A /* LaunchScreen.storyboard in Resources */,
 				CF0EB83D296653F000D4285C /* Poppins-SemiBold.ttf in Resources */,
 				CF0EB83C296653F000D4285C /* Poppins-Bold.ttf in Resources */,
@@ -228,11 +334,53 @@
 				CF56F9E32965C9370066265A /* Main.storyboard in Resources */,
 				CF0EB83A296653F000D4285C /* Poppins-Regular.ttf in Resources */,
 				CF0EB83B296653F000D4285C /* Poppins-Medium.ttf in Resources */,
-				CFDE0681296676B30088973C /* PromotionsCard.xib in Resources */,
+				CFAF1AE229669BC7002BAD33 /* PromotionsCard.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		0D3AF5DEF4E9EFB6708AAEB5 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-MokupUI-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E8A5407B8E97E524A3D099FD /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-MokupUI/Pods-MokupUI-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-MokupUI/Pods-MokupUI-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-MokupUI/Pods-MokupUI-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		CF56F9D42965C9370066265A /* Sources */ = {
@@ -240,9 +388,21 @@
 			buildActionMask = 2147483647;
 			files = (
 				CFDE0679296664C40088973C /* CornerView.swift in Sources */,
-				CF56F9E02965C9370066265A /* ViewController.swift in Sources */,
+				CF55A9C5296684C7006FBD26 /* BaseVM.swift in Sources */,
+				CF56F9E02965C9370066265A /* RewardsVC.swift in Sources */,
+				CFAF1AE629669C2F002BAD33 /* CategoryCrad.swift in Sources */,
 				CF56F9DC2965C9370066265A /* AppDelegate.swift in Sources */,
+				CF55A9BA296681F2006FBD26 /* AlertProvider.swift in Sources */,
 				CFDE0680296676B30088973C /* PromotionsCard.swift in Sources */,
+				CF55A9BE29668224006FBD26 /* ApplicationServiceProvider.swift in Sources */,
+				CF55A9CE29668589006FBD26 /* PromtionModel.swift in Sources */,
+				CF55A9C029668308006FBD26 /* Handlers.swift in Sources */,
+				CF55A9C7296684D8006FBD26 /* BaseVC.swift in Sources */,
+				CF55A9CB2966851A006FBD26 /* RewardsVM.swift in Sources */,
+				CF55A9C9296684F5006FBD26 /* LoadingIndicatorDelegate.swift in Sources */,
+				CF55A9BC2966820B006FBD26 /* NetworkRechability.swift in Sources */,
+				CF55A9C229668323006FBD26 /* Constant.swift in Sources */,
+				CF55A9D12966863A006FBD26 /* dummyData.swift in Sources */,
 				CF56F9DE2965C9370066265A /* SceneDelegate.swift in Sources */,
 				CFDE0675296662340088973C /* Extension.swift in Sources */,
 			);
@@ -386,6 +546,7 @@
 		};
 		CF56F9ED2965C9390066265A /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9CCAA666BAAA1D486BCE2744 /* Pods-MokupUI.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -413,6 +574,7 @@
 		};
 		CF56F9EE2965C9390066265A /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 79FF64DD6C0E0510CD7EC89C /* Pods-MokupUI.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
