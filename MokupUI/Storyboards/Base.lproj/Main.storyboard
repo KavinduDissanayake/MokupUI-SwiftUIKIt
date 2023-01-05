@@ -5,7 +5,6 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
-        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
@@ -32,10 +31,10 @@
                                                 <rect key="frame" x="0.0" y="0.0" width="414" height="1200"/>
                                                 <subviews>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FK5-FU-2BA">
-                                                        <rect key="frame" x="0.0" y="0.0" width="414" height="450"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="414" height="400"/>
                                                         <subviews>
                                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="DEg-WL-Bcu">
-                                                                <rect key="frame" x="20" y="50" width="374" height="380"/>
+                                                                <rect key="frame" x="20" y="50" width="374" height="330"/>
                                                                 <subviews>
                                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fSa-Nb-Ufi">
                                                                         <rect key="frame" x="0.0" y="0.0" width="374" height="50"/>
@@ -48,7 +47,6 @@
                                                                             </label>
                                                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_notification" translatesAutoresizingMaskIntoConstraints="NO" id="tUh-hT-fsd">
                                                                                 <rect key="frame" x="350" y="13" width="24" height="24"/>
-                                                                                <color key="backgroundColor" systemColor="opaqueSeparatorColor"/>
                                                                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                                 <constraints>
                                                                                     <constraint firstAttribute="width" constant="24" id="4YP-9m-E7T"/>
@@ -56,7 +54,6 @@
                                                                                 </constraints>
                                                                             </imageView>
                                                                         </subviews>
-                                                                        <color key="backgroundColor" systemColor="systemCyanColor"/>
                                                                         <constraints>
                                                                             <constraint firstItem="0aa-T7-YrI" firstAttribute="centerY" secondItem="fSa-Nb-Ufi" secondAttribute="centerY" id="2FD-Bh-cNF"/>
                                                                             <constraint firstAttribute="trailing" secondItem="tUh-hT-fsd" secondAttribute="trailing" id="6w6-Ft-FxI"/>
@@ -66,8 +63,8 @@
                                                                         </constraints>
                                                                     </view>
                                                                     <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" pagingEnabled="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="xCO-on-Mf0">
-                                                                        <rect key="frame" x="0.0" y="50" width="374" height="304"/>
-                                                                        <color key="backgroundColor" systemColor="systemRedColor"/>
+                                                                        <rect key="frame" x="0.0" y="50" width="374" height="254"/>
+                                                                        <color key="backgroundColor" name="#fdaf27"/>
                                                                         <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="Zxo-28-np7">
                                                                             <size key="itemSize" width="128" height="128"/>
                                                                             <size key="headerReferenceSize" width="0.0" height="0.0"/>
@@ -77,26 +74,26 @@
                                                                         <cells/>
                                                                     </collectionView>
                                                                     <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="QxC-dC-1Mj">
-                                                                        <rect key="frame" x="0.0" y="354" width="374" height="26"/>
+                                                                        <rect key="frame" x="0.0" y="304" width="374" height="26"/>
                                                                     </pageControl>
                                                                 </subviews>
                                                             </stackView>
                                                         </subviews>
-                                                        <color key="backgroundColor" systemColor="systemGreenColor"/>
+                                                        <color key="backgroundColor" name="#fdaf27"/>
                                                         <constraints>
                                                             <constraint firstAttribute="trailing" secondItem="DEg-WL-Bcu" secondAttribute="trailing" constant="20" id="B07-8D-GL7"/>
                                                             <constraint firstItem="DEg-WL-Bcu" firstAttribute="top" secondItem="FK5-FU-2BA" secondAttribute="top" constant="50" id="Nfh-RA-oMk"/>
-                                                            <constraint firstAttribute="height" constant="450" id="P6C-aE-h39"/>
+                                                            <constraint firstAttribute="height" constant="400" id="P6C-aE-h39"/>
                                                             <constraint firstItem="DEg-WL-Bcu" firstAttribute="leading" secondItem="FK5-FU-2BA" secondAttribute="leading" constant="20" id="UHk-9b-cuE"/>
                                                             <constraint firstAttribute="bottom" secondItem="DEg-WL-Bcu" secondAttribute="bottom" constant="20" id="u5n-ud-SlS"/>
                                                         </constraints>
                                                     </view>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="oem-7h-cq2">
-                                                        <rect key="frame" x="0.0" y="450" width="414" height="85"/>
+                                                        <rect key="frame" x="0.0" y="400" width="414" height="85"/>
                                                         <subviews>
                                                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="qsP-BZ-bIo">
                                                                 <rect key="frame" x="20" y="20" width="374" height="45"/>
-                                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="g0I-j5-By6">
                                                                     <size key="itemSize" width="128" height="128"/>
                                                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
@@ -115,7 +112,7 @@
                                                         </constraints>
                                                     </view>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="He2-z3-JxT">
-                                                        <rect key="frame" x="0.0" y="535" width="414" height="665"/>
+                                                        <rect key="frame" x="0.0" y="485" width="414" height="715"/>
                                                         <subviews>
                                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="7lg-Ft-9EX">
                                                                 <rect key="frame" x="10" y="0.0" width="394" height="567"/>
@@ -128,7 +125,7 @@
                                                                     </label>
                                                                     <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="6KD-R6-oCw">
                                                                         <rect key="frame" x="0.0" y="28.5" width="394" height="250"/>
-                                                                        <color key="backgroundColor" systemColor="systemMintColor"/>
+                                                                        <color key="backgroundColor" name="#f6f7fc"/>
                                                                         <constraints>
                                                                             <constraint firstAttribute="height" constant="250" id="g62-Fm-Gg3"/>
                                                                         </constraints>
@@ -148,7 +145,7 @@
                                                                     </label>
                                                                     <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="55R-eB-2rD">
                                                                         <rect key="frame" x="0.0" y="317" width="394" height="250"/>
-                                                                        <color key="backgroundColor" systemColor="systemPinkColor"/>
+                                                                        <color key="backgroundColor" name="#f6f7fc"/>
                                                                         <constraints>
                                                                             <constraint firstAttribute="height" constant="250" id="dsU-bE-EPY"/>
                                                                         </constraints>
@@ -161,10 +158,9 @@
                                                                         <cells/>
                                                                     </collectionView>
                                                                 </subviews>
-                                                                <color key="backgroundColor" systemColor="linkColor"/>
                                                             </stackView>
                                                         </subviews>
-                                                        <color key="backgroundColor" systemColor="systemGray4Color"/>
+                                                        <color key="backgroundColor" name="#f6f7fc"/>
                                                         <constraints>
                                                             <constraint firstAttribute="trailing" secondItem="7lg-Ft-9EX" secondAttribute="trailing" constant="10" id="9LQ-xz-jL0"/>
                                                             <constraint firstItem="7lg-Ft-9EX" firstAttribute="leading" secondItem="He2-z3-JxT" secondAttribute="leading" constant="10" id="k12-L0-boM"/>
@@ -174,7 +170,7 @@
                                                 </subviews>
                                             </stackView>
                                         </subviews>
-                                        <color key="backgroundColor" name="AccentColor"/>
+                                        <color key="backgroundColor" name="#f6f7fc"/>
                                         <constraints>
                                             <constraint firstAttribute="bottom" secondItem="TvO-NP-sQK" secondAttribute="bottom" id="AS0-lJ-31c"/>
                                             <constraint firstItem="TvO-NP-sQK" firstAttribute="top" secondItem="jUn-i7-CLX" secondAttribute="top" id="Sje-ww-3Am"/>
@@ -196,7 +192,7 @@
                             </scrollView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="yOA-O3-4Tg"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" name="#fdaf27"/>
                         <constraints>
                             <constraint firstItem="BoL-2U-pQh" firstAttribute="leading" secondItem="yOA-O3-4Tg" secondAttribute="leading" id="dKZ-zm-wff"/>
                             <constraint firstItem="BoL-2U-pQh" firstAttribute="top" secondItem="Qc0-HJ-G4f" secondAttribute="top" id="iSy-yS-XJN"/>
@@ -239,35 +235,11 @@
     </scenes>
     <resources>
         <image name="ic_notification" width="24" height="24"/>
-        <namedColor name="AccentColor">
-            <color red="0.0" green="0.46000000000000002" blue="0.89000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        <namedColor name="#f6f7fc">
+            <color red="0.96470588235294119" green="0.96862745098039216" blue="0.9882352941176471" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
-        <systemColor name="linkColor">
-            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </systemColor>
-        <systemColor name="opaqueSeparatorColor">
-            <color red="0.77647058823529413" green="0.77647058823529413" blue="0.78431372549019607" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </systemColor>
-        <systemColor name="systemBackgroundColor">
-            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
-        <systemColor name="systemCyanColor">
-            <color red="0.19607843137254902" green="0.67843137254901964" blue="0.90196078431372551" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </systemColor>
-        <systemColor name="systemGray4Color">
-            <color red="0.81960784313725488" green="0.81960784313725488" blue="0.83921568627450982" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </systemColor>
-        <systemColor name="systemGreenColor">
-            <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </systemColor>
-        <systemColor name="systemMintColor">
-            <color red="0.0" green="0.7803921568627451" blue="0.74509803921568629" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </systemColor>
-        <systemColor name="systemPinkColor">
-            <color red="1" green="0.17647058823529413" blue="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </systemColor>
-        <systemColor name="systemRedColor">
-            <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </systemColor>
+        <namedColor name="#fdaf27">
+            <color red="1" green="0.69803921568627447" blue="0.17647058823529413" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
     </resources>
 </document>
