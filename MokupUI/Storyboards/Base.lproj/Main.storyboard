@@ -9,6 +9,9 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
+        <array key="Poppins-Regular.ttf">
+            <string>Poppins-Regular</string>
+        </array>
         <array key="Poppins-SemiBold.ttf">
             <string>Poppins-SemiBold</string>
         </array>
@@ -21,8 +24,20 @@
                     <view key="view" contentMode="scaleToFill" id="fy6-pj-5OY">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Home" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PYx-jV-BLR">
+                                <rect key="frame" x="181.5" y="436" width="51" height="24"/>
+                                <fontDescription key="fontDescription" name="Poppins-Regular" family="Poppins" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="o0D-Ab-nDe"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="PYx-jV-BLR" firstAttribute="centerX" secondItem="fy6-pj-5OY" secondAttribute="centerX" id="D5x-Uk-bXY"/>
+                            <constraint firstItem="PYx-jV-BLR" firstAttribute="centerY" secondItem="fy6-pj-5OY" secondAttribute="centerY" id="TH8-pe-URl"/>
+                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Home" image="ic_home" id="tEQ-Cu-3d8"/>
                 </viewController>
@@ -37,8 +52,20 @@
                     <view key="view" contentMode="scaleToFill" id="hXa-Ah-OUI">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Challenges" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oFb-jx-THk">
+                                <rect key="frame" x="159" y="436" width="96.5" height="24"/>
+                                <fontDescription key="fontDescription" name="Poppins-Regular" family="Poppins" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="hSa-d0-TTd"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="oFb-jx-THk" firstAttribute="centerY" secondItem="hXa-Ah-OUI" secondAttribute="centerY" id="UgN-wh-ZkT"/>
+                            <constraint firstItem="oFb-jx-THk" firstAttribute="centerX" secondItem="hXa-Ah-OUI" secondAttribute="centerX" id="nEu-9d-NYu"/>
+                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Challenges" image="ic_challenges" id="wfa-EK-TZh"/>
                 </viewController>
@@ -67,7 +94,7 @@
                                                         <rect key="frame" x="0.0" y="0.0" width="414" height="400"/>
                                                         <subviews>
                                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="DEg-WL-Bcu">
-                                                                <rect key="frame" x="20" y="50" width="374" height="330"/>
+                                                                <rect key="frame" x="20" y="40" width="374" height="340"/>
                                                                 <subviews>
                                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fSa-Nb-Ufi">
                                                                         <rect key="frame" x="0.0" y="0.0" width="374" height="50"/>
@@ -96,7 +123,7 @@
                                                                         </constraints>
                                                                     </view>
                                                                     <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" pagingEnabled="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="xCO-on-Mf0">
-                                                                        <rect key="frame" x="0.0" y="50" width="374" height="254"/>
+                                                                        <rect key="frame" x="0.0" y="50" width="374" height="264"/>
                                                                         <color key="backgroundColor" name="#fdaf27"/>
                                                                         <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="Zxo-28-np7">
                                                                             <size key="itemSize" width="128" height="128"/>
@@ -107,7 +134,7 @@
                                                                         <cells/>
                                                                     </collectionView>
                                                                     <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="QxC-dC-1Mj">
-                                                                        <rect key="frame" x="0.0" y="304" width="374" height="26"/>
+                                                                        <rect key="frame" x="0.0" y="314" width="374" height="26"/>
                                                                     </pageControl>
                                                                 </subviews>
                                                             </stackView>
@@ -115,7 +142,7 @@
                                                         <color key="backgroundColor" name="#fdaf27"/>
                                                         <constraints>
                                                             <constraint firstAttribute="trailing" secondItem="DEg-WL-Bcu" secondAttribute="trailing" constant="20" id="B07-8D-GL7"/>
-                                                            <constraint firstItem="DEg-WL-Bcu" firstAttribute="top" secondItem="FK5-FU-2BA" secondAttribute="top" constant="50" id="Nfh-RA-oMk"/>
+                                                            <constraint firstItem="DEg-WL-Bcu" firstAttribute="top" secondItem="FK5-FU-2BA" secondAttribute="top" constant="40" id="Nfh-RA-oMk"/>
                                                             <constraint firstAttribute="height" constant="400" id="P6C-aE-h39"/>
                                                             <constraint firstItem="DEg-WL-Bcu" firstAttribute="leading" secondItem="FK5-FU-2BA" secondAttribute="leading" constant="20" id="UHk-9b-cuE"/>
                                                             <constraint firstAttribute="bottom" secondItem="DEg-WL-Bcu" secondAttribute="bottom" constant="20" id="u5n-ud-SlS"/>
@@ -170,7 +197,7 @@
                                                                         </collectionViewFlowLayout>
                                                                         <cells/>
                                                                     </collectionView>
-                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Completed Rewards" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ROq-UD-VX1">
+                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Un completed Rewards" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ROq-UD-VX1">
                                                                         <rect key="frame" x="0.0" y="288.5" width="394" height="18.5"/>
                                                                         <fontDescription key="fontDescription" name="Poppins-SemiBold" family="Poppins" pointSize="13"/>
                                                                         <nil key="textColor"/>
@@ -255,10 +282,22 @@
                     <view key="view" contentMode="scaleToFill" id="SrP-6S-WDd">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Learder board" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="h3v-6S-Wfu">
+                                <rect key="frame" x="147" y="436" width="120.5" height="24"/>
+                                <fontDescription key="fontDescription" name="Poppins-Regular" family="Poppins" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="SYM-0y-Qpc"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="h3v-6S-Wfu" firstAttribute="centerX" secondItem="SrP-6S-WDd" secondAttribute="centerX" id="b1T-Yj-lBH"/>
+                            <constraint firstItem="h3v-6S-Wfu" firstAttribute="centerY" secondItem="SrP-6S-WDd" secondAttribute="centerY" id="nLa-cp-6sO"/>
+                        </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item" image="ic_leaderboard" id="lzW-dy-Yo6"/>
+                    <tabBarItem key="tabBarItem" title="Learderboard" image="ic_leaderboard" id="lzW-dy-Yo6"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="VWe-7B-tYJ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -293,8 +332,20 @@
                     <view key="view" contentMode="scaleToFill" id="l9j-lo-Uqt">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Profile" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HEO-WG-2c4">
+                                <rect key="frame" x="181" y="436" width="52" height="24"/>
+                                <fontDescription key="fontDescription" name="Poppins-Regular" family="Poppins" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="JFc-U4-ywG"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="HEO-WG-2c4" firstAttribute="centerX" secondItem="l9j-lo-Uqt" secondAttribute="centerX" id="EyD-nI-SvB"/>
+                            <constraint firstItem="HEO-WG-2c4" firstAttribute="centerY" secondItem="l9j-lo-Uqt" secondAttribute="centerY" id="JXD-6u-cwz"/>
+                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Profile" image="ic_profile" id="Nab-qr-4Kc"/>
                 </viewController>
